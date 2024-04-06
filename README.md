@@ -74,12 +74,18 @@ cd ~/your_fav_code_directory
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
 
+# Install Catch2 manually
+$ git clone https://github.com/catchorg/Catch2.git
+$ cd Catch2
+$ cmake -Bbuild -H. -DBUILD_TESTING=OFF
+$ sudo cmake --build build/ --target install
+
 # Install dependencies (as described above, or your preferred method)
 ./scripts/install_prerequisites.sh recommended
 
 # Configure and build
-cmake -B build
-cmake --build build
+cmake -Bbuild -H.
+sudo cmake --build build --target install
 
 # with Ninja for faster builds (sudo apt install ninja-build)
 cmake -B build -GNinja
