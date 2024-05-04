@@ -25,8 +25,8 @@ SET(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 include(SetPlatformVars)
 include(PangolinFactory)
 
-option( BUILD_TOOLS "Build Tools" OFF )
-option( BUILD_EXAMPLES "Build Examples" OFF )
+option( BUILD_TOOLS "Build Tools" ON )
+option( BUILD_EXAMPLES "Build Examples" ON )
 option( BUILD_ASAN "Enable AddressSanitizer for Debug builds" OFF )
 
 # Default build type (Override with cmake .. -DCMAKE_BUILD_TYPE=...)
